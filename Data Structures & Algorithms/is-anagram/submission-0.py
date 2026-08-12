@@ -1,0 +1,15 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        s1={}
+        for i in range(len(s)):
+            s1[s[i]]=s1.get(s[i],0)+1
+        t1={}
+        for i in range(len(t)):
+            t1[t[i]]=t1.get(t[i],0)+1
+        
+        output= False
+
+        if s1 == t1:
+            output=True
+        
+        return output
